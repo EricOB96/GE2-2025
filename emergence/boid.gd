@@ -50,25 +50,6 @@ func persure(pursue_target):
 	
 	return seek(projected)
 
-
-func player_steering():
-	var s = Input.get_axis("move_back", "move_forward")
-	var f:Vector3 = Vector3.ZERO
-	
-	f = global_basis.z * s * s_force
-	
-	var l = Input.get_axis("turn_left", "turn_right")
-	var xz_direction = global_basis.x
-	xz_direction.y = 0
-	f -= xz_direction.x * l * s_force
-	xz_direction.normalized()
-	
-
-@export var damping:float = 0.3
-
-@export var player_steering_enabled:bool = true
-@export var s_force:float = 10
-
 func player_steering():
 	var s = Input.get_axis("move_back", "move_forward")
 	var f:Vector3 = Vector3.ZERO	

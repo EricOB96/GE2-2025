@@ -1,8 +1,23 @@
 [gd_scene load_steps=14 format=3 uid="uid://cdl7pxjuqykwe"]
 
 [ext_resource type="Script" path="res://boid.gd" id="1_g7hsx"]
-[ext_resource type="Script" path="res://FPController.gd" id="2_q6o6m"]
+[ext_resource type="Script" path="res://TPCamera.gd" id="3_p2fuv"]
 [ext_resource type="Script" path="res://timer.gd" id="3_tgpyc"]
+[ext_resource type="Script" path="res://PathDrawer.gd" id="4_p2fuv"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tgpyc"]
+sky_top_color = Color(0.929874, 0.947462, 0.990667, 1)
+sky_horizon_color = Color(1.21557, 1.21222, 1.21402, 1)
+ground_horizon_color = Color(1.21557, 1.21222, 1.21402, 1)
+
+[sub_resource type="Sky" id="Sky_p2fuv"]
+sky_material = SubResource("ProceduralSkyMaterial_tgpyc")
+
+[sub_resource type="Environment" id="Environment_dik45"]
+background_mode = 2
+sky = SubResource("Sky_p2fuv")
+tonemap_mode = 2
+glow_enabled = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_q6o6m"]
 
