@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Games Engines 2 2025"
-run/main_scene="res://seek.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+run/main_scene="uid://dhakyuxigioo6"
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
@@ -59,3 +59,13 @@ move_down={
 "events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":3,"axis_value":1.0,"script":null)
 ]
 }
+
+[rendering]
+
+anti_aliasing/quality/msaa_2d=2
+anti_aliasing/quality/msaa_3d=2
+
+[xr]
+
+openxr/enabled=true
+openxr/startup_alert=false
